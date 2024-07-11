@@ -10,5 +10,8 @@ RUN wget https://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubunt
 
 ENV LLVM_CONFIG=/usr/local/bin/llvm-config
 
+RUN pip install magenta
+RUN python -c "import magenta;print(magenta)"
+
 CMD ["echo", "done"]
 
